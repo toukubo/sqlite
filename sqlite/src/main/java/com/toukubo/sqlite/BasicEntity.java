@@ -61,7 +61,7 @@ public abstract class BasicEntity {
 	@Transient 
 	public List list(){
 		begin();
-		TypedQuery query = em.createQuery("SELECT p From " + getClassName(),getClazz());
+		TypedQuery query = em.createQuery("From " + getClassName() ,getClazz());
 		close();
 		return query.getResultList();
 	}
